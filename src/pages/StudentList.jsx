@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { deleteStudentAPI, getAllStudentAPI } from '../services/allapi'
+import { deleteStudentAPI, getAllStudentAPI } from '../services/allApi'
 import { Link } from 'react-router-dom';
 
 function StudentList() {
@@ -33,7 +33,7 @@ console.log(allStudents);
     <div className='container my-5'>
         <div className='d-flex justify-content-between align-items-center'>
             <h1>All Student List</h1>
-            <button className='btn btn-info'>Add student</button>
+            <Link to={'/add'} className='btn btn-info'>Add student</Link>
         </div>
       <table className='table table-hover'>
         <thead>
@@ -48,9 +48,9 @@ console.log(allStudents);
         </thead>
         <tbody>
           {
-            allStudents?.map(student=>(
+            allStudents?.map((student,index)=>(
               <tr key={student?.id}>
-            <td>{student.id}</td>
+            <td>{index+1}</td>
             <td>{student.name}</td>
             <td>{student.email}</td>
             <td>{student.course}</td>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance=axios.create({
-    baseURL:'https://student-mangement-server-vty5.onrender.com',
+    baseURL:'http://localhost:3000',
     timeout:10000
 })
 
