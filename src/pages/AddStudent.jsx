@@ -28,7 +28,7 @@ function AddStudent() {
           <input onChange={(e) => setstudent({ ...student, email: e.target.value })} type='email' className='form-control mb-3' placeholder='email'></input>
           <div>
             <button onClick={handlesubmit} className='btn btn-info '>ADD</button>
-            <Link to={'/'}  className='btn btn-dark  '>BACK</Link>
+            <Link to={'/'}  className='btn btn-dark ms-5 '>BACK</Link>
           </div>
         </form>
       </div>
